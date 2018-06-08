@@ -4,7 +4,7 @@
 
 Travis: https://travis-ci.com/khuynh92/08-rest
 Heroku: khoa-08-rest.herokuapp.com
-PR: 
+PR: https://github.com/khuynh92/08-rest/pull/1
 
 in order to run this app:
 
@@ -15,9 +15,7 @@ in order to run this app:
       `PORT = 3000` 
                            <br>
  3. in your terminal, locate where you cloned this repository, and then type the command: <br>
-
-      `npm start`
-                                       <br>
+      `npm start` <br>
  4. in your broswer go to 
 `http://localhost:<YOURPORTHERE>`
 <br>
