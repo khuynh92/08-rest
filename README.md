@@ -10,9 +10,7 @@ in order to run this app:
 
  1. clone this repository
 
- 2. in your root folder, create a .env file and set PORT to your desired port.
-     example: 
-      `PORT = 3000` 
+ 2. in your root folder, create a .env file and set PORT to your desired port.  example: `PORT = 3000` 
 3. in your terminal, locate where you cloned this repository, and then type the command:  
       `npm start`  
 4. in your broswer go to  
