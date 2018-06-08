@@ -13,10 +13,9 @@ in order to run this app:
  2. in your root folder, create a .env file and set PORT to your desired port.
      example:
       `PORT = 3000` 
-                           <br>
- 3. in your terminal, locate where you cloned this repository, and then type the command: <br>
-      `npm start` <br>
- 4. in your broswer go to 
+<br> 3. in your terminal, locate where you cloned this repository, and then type the command: <br>
+      `npm start`
+<br> 4. in your broswer go to 
 `http://localhost:<YOURPORTHERE>`
 <br>
  5. Here, you can test different RESTful routes to ensure GET requests are working for `/api/v1/pizza`
