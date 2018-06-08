@@ -1,84 +1,35 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 08: REST
-======
+[![Build Status](https://travis-ci.com/khuynh92/08-rest.svg?branch=master)](https://travis-ci.com/khuynh92/08-rest)
 
-## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Create a PR to your master from your working branch.
-* Ensure that your repository/branch is connected to travis-ci.com
-* Ensure that your repository/branch is connected to a dyno at heroku.com
-* Heroku and Travis should pick you up and deploy
-* Submit on canvas:
-  * a question and observation
-  * how long you spent
-  * link to your pull request
-  * link to your build at travis-ci URL
-  * Heroku Server URL
+## 08-rest
 
-## Configuration 
-Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation
-* **.env** - contains env variables (should be git ignored)
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course linter configuratoin
-* **.eslintignore** - contains the course linter ignore configuration
-* **.travis.yml** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint (eslint **/*.js)
-  * create a `test` script for running tests
-  * create a `start` script for running your server
-* **index.js** - the entry point for your application
-* **src/** - contains your core application files and folders
-* **src/app.js** - (or main.js) contains your core application bootstrap
-* **src/lib/** - contains module definitions
-* **\_\_test\_\_/** - contains unit tests
+Travis: https://travis-ci.com/khuynh92/08-rest
+Heroku: khoa-08-rest.herokuapp.com
+PR: 
 
-## Learning Objectives  
-* students will learn to use promise constructs to manage asynchronous code
-* students will learn to create a vanilla RESTful API
+in order to run this app:
 
-#### Feature Tasks
-* create the following directories to organize your code:
-  * `src`
-  * `src/lib`
-  * `src/api`
-  * `__test__`
-* create an HTTP server using the native NodeJS `http` module
-* create a custom parser module that:
-  * uses promises to parse the JSON body of `POST` and `PUT` requests
-  * uses the NodeJS `url` and `querystring` modules to parse the request url
-* create a router constructor that allows you to register custom routes for `GET`, `POST`, `PUT`, and `DELETE` requests
-* create a router constructor that handles requests to `GET`, `POST`, `PUT`, and `DELETE` using the custom routes defined
+ 1. clone this repository
+<br>
+ 2. in your root folder, create a .env file and set PORT to your desired port.
+     example:
+      `PORT = 3000` 
+                           <br>
+ 3. in your terminal, locate where you cloned this repository, and then type the command: <br>
 
-## Server Endpoints
-### `/api/v1/simple-resource-name`
-**These will be "proof of life" endpoints, to prove server health**
+      `npm start`
+                                       <br>
+ 4. in your broswer go to 
+`http://localhost:<YOURPORTHERE>`
+<br>
+ 5. Here, you can test different RESTful routes to ensure GET requests are working for `/api/v1/pizza`
 
-NOTE: simple-resource-name is left up to you. E.g. dog, cat, whatever...
+    `http://localhost::<YOURPORTHERE>/api/v1/pizza?id=hello world!`
 
-* `POST` request
- * pass data as stringifed JSON in the body of a **POST** request 
- * return a 200 response with the POST'd JSON as the content
- * (Prove that you got the JSON from the POST)
-* `PUT` request
- * pass `?id=<uuid>` as a query string parameter to identify a specific resource
-  * pass data as stringifed JSON in the body of a **PUT** request 
-  * return a 200 response with the JSON as the content
-  * (Prove that you got the JSON from the PUT)
-* `GET` request
- * pass `?id=<uuid>` as a query string parameter to identify a specific resource
- * return a 200 response, and a message that states "ID: <id>" was requested
- * (Prove that you got the id from the query string)
- * `DELETE` request
-  * pass `?id=<uuid>` as a query string parameter to identify a specific resource
-  * return a 200 response, and a message that states "ID: <id>" was deleted
-  * (Prove that you got the id from the query string)
-  
-## Tests
-* write a test to ensure that your api returns a status code of 404 for routes that have not been registered
-* write tests to ensure the `/api/simple-resource-name` endpoint responds as described for each condition below:
- * `GET`: test 404, it should respond with 'not found' for valid requests made with an id that was not found
- * `GET`: test 400, it should respond with 'bad request' if no id was provided in the request
- * `GET`: test 200, it should contain a response body for a request made with a valid id
- * `POST`: test 400, it should respond with 'bad request' if no request body was provided or the body was invalid
- * `POST`: test 200, it should respond with the body content for a post request with a valid body
+6. To test POST, use your choice of of tools that makes requests to servers (httpie, postman). Make sure to send an object body, or a 400 error will appear. POST requests will only work on api/v1/pizza.
+
+7. To test POST, use your choice of of tools that makes requests to servers (httpie, postman). Make sure to send an object body, or a 400 error will appear. If no id query is passed, a 404 error will appear. POST requests will only work on pathnames with id queries api/v1/pizza/?id=youridhere.
+
+8. To test DELETE, use your choice of of tools that makes requests to servers (httpie, postman). If no id query is passed, a 404 error will appear. DELETE requests will only work on pathnames with id queries: api/v1/pizza/?id=youridhere.
+
+
+
