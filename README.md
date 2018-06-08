@@ -9,17 +9,16 @@ PR: https://github.com/khuynh92/08-rest/pull/1
 in order to run this app:
 
  1. clone this repository
-<br>
+
  2. in your root folder, create a .env file and set PORT to your desired port.
      example:
       `PORT = 3000` 
-<br> 3. in your terminal, locate where you cloned this repository, and then type the command: <br>
+3. in your terminal, locate where you cloned this repository, and then type the command:
       `npm start`
-<br> 4. in your broswer go to 
+4. in your broswer go to 
 `http://localhost:<YOURPORTHERE>`
-<br>
- 5. Here, you can test different RESTful routes to ensure GET requests are working for `/api/v1/pizza`
 
+5. Here, you can test different RESTful routes to ensure GET requests are working for `/api/v1/pizza`
     `http://localhost::<YOURPORTHERE>/api/v1/pizza?id=hello world!`
 
 6. To test POST, use your choice of of tools that makes requests to servers (httpie, postman). Make sure to send an object body, or a 400 error will appear. POST requests will only work on api/v1/pizza.
