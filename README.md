@@ -2,9 +2,9 @@
 
 ## 08-rest
 
-Travis: https://travis-ci.com/khuynh92/08-rest
-Heroku: khoa-08-rest.herokuapp.com
-PR: https://github.com/khuynh92/08-rest/pull/1
+  Travis: https://travis-ci.com/khuynh92/08-rest
+  Heroku: khoa-08-rest.herokuapp.com
+  PR: https://github.com/khuynh92/08-rest/pull/1
 
 in order to run this app:
 
